@@ -1,0 +1,358 @@
+{
+  "info": {
+    "name": "mobilebankingbff-5-2-0 Postman Collection",
+    "description": "Operational baseline generated from observed Kong Konnect configuration.\n\nOpenAPI version: 3.0.3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "noauth"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://httpbin.org/anything/aldermoor/mobile-bff",
+      "type": "string",
+      "description": "Override with the base URL of the deployed Kong gateway."
+    }
+  ],
+  "item": [
+    {
+      "name": "mobilebankingbff-5-2-0--getaccounts",
+      "request": {
+        "method": "GET",
+        "description": "mobilebankingbff-5-2-0--getaccounts\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/accounts",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "accounts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--getcards",
+      "request": {
+        "method": "GET",
+        "description": "mobilebankingbff-5-2-0--getcards\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/cards",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "cards"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--getconfig",
+      "request": {
+        "method": "GET",
+        "description": "mobilebankingbff-5-2-0--getconfig\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/config",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "config"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--getdashboard",
+      "request": {
+        "method": "GET",
+        "description": "mobilebankingbff-5-2-0--getdashboard\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/dashboard",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "dashboard"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--postdevices",
+      "request": {
+        "method": "POST",
+        "description": "mobilebankingbff-5-2-0--postdevices\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/devices",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "devices"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--getinsights",
+      "request": {
+        "method": "GET",
+        "description": "mobilebankingbff-5-2-0--getinsights\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/insights",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "insights"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--getmessages",
+      "request": {
+        "method": "GET",
+        "description": "mobilebankingbff-5-2-0--getmessages\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/messages",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "messages"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--getoffers",
+      "request": {
+        "method": "GET",
+        "description": "mobilebankingbff-5-2-0--getoffers\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/offers",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "offers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--postpayments",
+      "request": {
+        "method": "POST",
+        "description": "mobilebankingbff-5-2-0--postpayments\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/payments",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "payments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--headping",
+      "request": {
+        "method": "HEAD",
+        "description": "mobilebankingbff-5-2-0--headping\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/ping",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "ping"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--getquick-balance",
+      "request": {
+        "method": "GET",
+        "description": "mobilebankingbff-5-2-0--getquick-balance\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/quick-balance",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "quick-balance"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--getsavings-goals",
+      "request": {
+        "method": "GET",
+        "description": "mobilebankingbff-5-2-0--getsavings-goals\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/savings-goals",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "savings-goals"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--postsavings-goals",
+      "request": {
+        "method": "POST",
+        "description": "mobilebankingbff-5-2-0--postsavings-goals\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/savings-goals",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "savings-goals"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--postsca-challenges",
+      "request": {
+        "method": "POST",
+        "description": "mobilebankingbff-5-2-0--postsca-challenges\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/sca/challenges",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "sca",
+            "challenges"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--getstatus",
+      "request": {
+        "method": "GET",
+        "description": "mobilebankingbff-5-2-0--getstatus\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/status",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mobilebankingbff-5-2-0--postsupport-tickets",
+      "request": {
+        "method": "POST",
+        "description": "mobilebankingbff-5-2-0--postsupport-tickets\n\nResponses:\n- default: Runtime response semantics are not observable from Kong configuration.",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mobile/bff/5.2.0/support/tickets",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "mobile",
+            "bff",
+            "5.2.0",
+            "support",
+            "tickets"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
