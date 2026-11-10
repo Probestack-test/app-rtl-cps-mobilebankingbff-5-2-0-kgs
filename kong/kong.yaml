@@ -1,0 +1,4000 @@
+_format_version: "3.0"
+_transform: true
+
+########################################################
+# SERVICES
+########################################################
+
+services:
+  - name: mobilebankingbff-5-2-0
+    host: httpbin.org
+    port: 443
+    protocol: https
+    path: /anything/aldermoor/mobile-bff
+    retries: 5
+    connect_timeout: 60000
+    write_timeout: 60000
+    read_timeout: 60000
+    enabled: true
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+    routes:
+      - name: mobilebankingbff-5-2-0--putsavings-goals-goalid
+        protocols:
+          - https
+        methods:
+          - PUT
+        paths:
+          - ~/mobile/bff/5\.2\.0/savings\-goals/(?<goalId>[^/]+)$
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_savings-goals_{goalId}
+          - wso2-verb:PUT
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getspending-period
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - ~/mobile/bff/5\.2\.0/spending/(?<period>[^/]+)$
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_spending_{period}
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getinsights
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - /mobile/bff/5.2.0/insights
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_insights
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--headping
+        protocols:
+          - https
+        methods:
+          - HEAD
+        paths:
+          - /mobile/bff/5.2.0/ping
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_ping
+          - wso2-verb:HEAD
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--postsupport-tickets
+        protocols:
+          - https
+        methods:
+          - POST
+        paths:
+          - /mobile/bff/5.2.0/support/tickets
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_support_tickets
+          - wso2-verb:POST
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getstatus
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - /mobile/bff/5.2.0/status
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_status
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getconfig
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - /mobile/bff/5.2.0/config
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_config
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getaccounts
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - /mobile/bff/5.2.0/accounts
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_accounts
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--postsavings-goals
+        protocols:
+          - https
+        methods:
+          - POST
+        paths:
+          - /mobile/bff/5.2.0/savings-goals
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_savings-goals
+          - wso2-verb:POST
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--postcards-cardid-freeze
+        protocols:
+          - https
+        methods:
+          - POST
+        paths:
+          - ~/mobile/bff/5\.2\.0/cards/(?<cardId>[^/]+)/freeze$
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_cards_{cardId}_freeze
+          - wso2-verb:POST
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--postdevices
+        protocols:
+          - https
+        methods:
+          - POST
+        paths:
+          - /mobile/bff/5.2.0/devices
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_devices
+          - wso2-verb:POST
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getcards
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - /mobile/bff/5.2.0/cards
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_cards
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--postsca-challenges
+        protocols:
+          - https
+        methods:
+          - POST
+        paths:
+          - /mobile/bff/5.2.0/sca/challenges
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_sca_challenges
+          - wso2-verb:POST
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getsupport-tickets-ticketid
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - ~/mobile/bff/5\.2\.0/support/tickets/(?<ticketId>[^/]+)$
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_support_tickets_{ticketId}
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--postsca-challenges-challengeid-verify
+        protocols:
+          - https
+        methods:
+          - POST
+        paths:
+          - ~/mobile/bff/5\.2\.0/sca/challenges/(?<challengeId>[^/]+)/verify$
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_sca_challenges_{challengeId}_verify
+          - wso2-verb:POST
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--postpayments
+        protocols:
+          - https
+        methods:
+          - POST
+        paths:
+          - /mobile/bff/5.2.0/payments
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_payments
+          - wso2-verb:POST
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getsavings-goals
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - /mobile/bff/5.2.0/savings-goals
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_savings-goals
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getmessages
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - /mobile/bff/5.2.0/messages
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_messages
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getdashboard
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - /mobile/bff/5.2.0/dashboard
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_dashboard
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--deletedevices-deviceid
+        protocols:
+          - https
+        methods:
+          - DELETE
+        paths:
+          - ~/mobile/bff/5\.2\.0/devices/(?<deviceId>[^/]+)$
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_devices_{deviceId}
+          - wso2-verb:DELETE
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getquick-balance
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - /mobile/bff/5.2.0/quick-balance
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_quick-balance
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--deletesavings-goals-goalid
+        protocols:
+          - https
+        methods:
+          - DELETE
+        paths:
+          - ~/mobile/bff/5\.2\.0/savings\-goals/(?<goalId>[^/]+)$
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_savings-goals_{goalId}
+          - wso2-verb:DELETE
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getaccounts-accountid-transactions
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - ~/mobile/bff/5\.2\.0/accounts/(?<accountId>[^/]+)/transactions$
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_accounts_{accountId}_transactions
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getpayments-paymentid
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - ~/mobile/bff/5\.2\.0/payments/(?<paymentId>[^/]+)$
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_payments_{paymentId}
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--getoffers
+        protocols:
+          - https
+        methods:
+          - GET
+        paths:
+          - /mobile/bff/5.2.0/offers
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_offers
+          - wso2-verb:GET
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+      - name: mobilebankingbff-5-2-0--postcards-cardid-unfreeze
+        protocols:
+          - https
+        methods:
+          - POST
+        paths:
+          - ~/mobile/bff/5\.2\.0/cards/(?<cardId>[^/]+)/unfreeze$
+        strip_path: false
+        preserve_host: false
+        https_redirect_status_code: 426
+        regex_priority: 0
+        path_handling: v0
+        request_buffering: true
+        response_buffering: true
+        tags:
+          - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+          - migrated-by:forgeshift-wso2-migrator
+          - bff
+          - mobile
+          - retail
+          - wso2-resource:_cards_{cardId}_unfreeze
+          - wso2-verb:POST
+          - proxyx-proxy-id:PX-9CDFC9C6DE09
+
+########################################################
+# PLUGINS
+########################################################
+
+plugins:
+  - name: acl
+    route: mobilebankingbff-5-2-0--deletedevices-deviceid
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getspending-period
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/spending/$(uri_captures.period)
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges-challengeid-verify
+    consumer: 9ffd82e7-6a71-4127-a32e-5f77420a57c6
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getsavings-goals
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/savings-goals
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getinsights
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getcards
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--postsavings-goals
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postdevices
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postdevices
+    consumer: 65d68edb-8fcd-4a4c-af71-117556fd6868
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getsupport-tickets-ticketid
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/support/tickets/$(uri_captures.ticketId)
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getstatus
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges
+    consumer: e4121782-f93f-4110-ba8b-c08e6d880e1c
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--postsupport-tickets
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/support/tickets
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges-challengeid-verify
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: pre-function
+    service: mobilebankingbff-5-2-0
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      access:
+        - "-- Apigee path rewrite (apigee-kong-migrator)\nlocal route        = kong.router.get_route()\nlocal service      = kong.router.get_service()\nlocal service_path = (service and service.path) or \"/\"\n-- Check for apigee-strip-len tag set on suffix routes during migration\nlocal strip_len = nil\nif route and route.tags then\n  for _, tag in ipairs(route.tags) do\n    if tag:sub(1, 17) == \"apigee-strip-len:\" then\n      strip_len = tonumber(tag:sub(18))\n      break\n    end\n  end\nend\n-- Fall back to route path length if no tag (covers normal routes)\nif not strip_len then\n  local route_path = (route and route.paths and route.paths[1]) or \"/\"\n  if route_path:sub(1, 1) == \"~\" then route_path = route_path:sub(2) end\n  strip_len = #route_path\nend\nlocal incoming = kong.request.get_path()\nlocal suffix = \"/\"\nif #incoming >= strip_len then\n  suffix = incoming:sub(strip_len + 1)\nend\nif suffix == \"\" then suffix = \"/\" end\nlocal clean_target = service_path:gsub(\"/+$\", \"\")\nif suffix:sub(1, 1) ~= \"/\" then suffix = \"/\" .. suffix end\nkong.service.request.set_path(clean_target .. suffix)\n"
+      body_filter:
+        []
+      certificate:
+        []
+      functions:
+        []
+      header_filter:
+        []
+      log:
+        []
+      rewrite:
+        []
+      ws_client_frame:
+        []
+      ws_close:
+        []
+      ws_handshake:
+        []
+      ws_upstream_frame:
+        []
+    tags:
+      - global
+      - apigee-path-rewrite
+  - name: acl
+    route: mobilebankingbff-5-2-0--postsupport-tickets
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getquick-balance
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--postsca-challenges
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/sca/challenges
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--postdevices
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getaccounts-accountid-transactions
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges
+    consumer: b2146040-afb2-4bf3-82d3-5393cf01833e
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getaccounts
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/accounts
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getmessages
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postdevices
+    consumer: e4121782-f93f-4110-ba8b-c08e6d880e1c
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--postsca-challenges
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--postpayments
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getsupport-tickets-ticketid
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getsavings-goals
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getinsights
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/insights
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getaccounts
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--putsavings-goals-goalid
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--postsavings-goals
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/savings-goals
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getcards
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/cards
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--postcards-cardid-freeze
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--headping
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges
+    consumer: 0623e856-6ce9-49c7-9685-df58415560e2
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--postcards-cardid-unfreeze
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    service: mobilebankingbff-5-2-0
+    consumer: 9ffd82e7-6a71-4127-a32e-5f77420a57c6
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20000
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:RetailPremium
+      - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--deletesavings-goals-goalid
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    service: mobilebankingbff-5-2-0
+    consumer: e4121782-f93f-4110-ba8b-c08e6d880e1c
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 50
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:AldermoorInternal
+      - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: jwt
+    service: mobilebankingbff-5-2-0
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      anonymous: null
+      claims_to_verify:
+        - exp
+      cookie_names:
+        []
+      header_names:
+        - X-Aldermoor-Authorization
+      key_claim_name: azp
+      maximum_expiration: 0
+      realm: null
+      run_on_preflight: true
+      secret_is_base64: "[REDACTED]"
+      uri_param_names:
+        - jwt
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    service: mobilebankingbff-5-2-0
+    consumer: 0623e856-6ce9-49c7-9685-df58415560e2
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 50000
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:AldermoorInternal
+      - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges
+    consumer: 9ffd82e7-6a71-4127-a32e-5f77420a57c6
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    service: mobilebankingbff-5-2-0
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20000
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:RetailPremium
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postdevices
+    consumer: b2146040-afb2-4bf3-82d3-5393cf01833e
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getmessages
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/messages
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--postdevices
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/devices
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges-challengeid-verify
+    consumer: 65d68edb-8fcd-4a4c-af71-117556fd6868
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--postcards-cardid-unfreeze
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/cards/$(uri_captures.cardId)/unfreeze
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--deletedevices-deviceid
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/devices/$(uri_captures.deviceId)
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postdevices
+    consumer: 0623e856-6ce9-49c7-9685-df58415560e2
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postdevices
+    consumer: 9ffd82e7-6a71-4127-a32e-5f77420a57c6
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges-challengeid-verify
+    consumer: b2146040-afb2-4bf3-82d3-5393cf01833e
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getpayments-paymentid
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/payments/$(uri_captures.paymentId)
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getoffers
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getoffers
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/offers
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--postsca-challenges-challengeid-verify
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    service: mobilebankingbff-5-2-0
+    consumer: 65d68edb-8fcd-4a4c-af71-117556fd6868
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20000
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:RetailPremium
+      - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getpayments-paymentid
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getdashboard
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getspending-period
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getaccounts-accountid-transactions
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/accounts/$(uri_captures.accountId)/transactions
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--postcards-cardid-freeze
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/cards/$(uri_captures.cardId)/freeze
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges-challengeid-verify
+    consumer: 0623e856-6ce9-49c7-9685-df58415560e2
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--deletesavings-goals-goalid
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/savings-goals/$(uri_captures.goalId)
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getstatus
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/status
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges
+    consumer: 65d68edb-8fcd-4a4c-af71-117556fd6868
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--postpayments
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/payments
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getdashboard
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/dashboard
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--putsavings-goals-goalid
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/savings-goals/$(uri_captures.goalId)
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--postsca-challenges-challengeid-verify
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/sca/challenges/$(uri_captures.challengeId)/verify
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getconfig
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/config
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    service: mobilebankingbff-5-2-0
+    consumer: b2146040-afb2-4bf3-82d3-5393cf01833e
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 100000
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:AldermoorInternal
+      - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: acl
+    route: mobilebankingbff-5-2-0--getconfig
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      allow:
+        - wso2-api:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      allow_when: null
+      always_use_authenticated_groups: false
+      deny: null
+      deny_when: null
+      hide_groups_header: true
+      include_consumer_groups: false
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--getquick-balance
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/quick-balance
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: request-transformer
+    route: mobilebankingbff-5-2-0--headping
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      add:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      append:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      http_method: null
+      remove:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      rename:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+      replace:
+        body:
+          []
+        headers:
+          []
+        querystring:
+          []
+        uri: /anything/aldermoor/mobile-bff/ping
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+  - name: rate-limiting
+    route: mobilebankingbff-5-2-0--postsca-challenges-challengeid-verify
+    consumer: e4121782-f93f-4110-ba8b-c08e6d880e1c
+    enabled: true
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    config:
+      custom_key: null
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 20
+      month: null
+      path: null
+      policy: local
+      redis:
+        cloud_authentication: null
+        database: 0
+        host: null
+        password: "[REDACTED]"
+        port: 6379
+        server_name: null
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+        username: null
+      redis_database: 0
+      redis_host: null
+      redis_password: "[REDACTED]"
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    tags:
+      - wso2-source-id:a4baa4e9-c6e5-40f6-b0b3-0baff8c7e9c5
+      - migrated-by:forgeshift-wso2-migrator
+      - bff
+      - mobile
+      - retail
+      - wso2-tier:SensitiveActionGuard
+      - proxyx-proxy-id:PX-9CDFC9C6DE09
+
+########################################################
+# UPSTREAMS + TARGETS
+########################################################
+
+upstreams:
+  []

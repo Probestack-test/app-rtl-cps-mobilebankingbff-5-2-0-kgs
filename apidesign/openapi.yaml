@@ -1,0 +1,292 @@
+openapi: 3.0.3
+info:
+  title: mobilebankingbff-5-2-0
+  version: 1.0.0
+  description: Operational baseline generated from observed Kong Konnect configuration.
+servers:
+- url: https://httpbin.org/anything/aldermoor/mobile-bff
+paths:
+  /mobile/bff/5.2.0/accounts:
+    get:
+      operationId: getMobileBff520Accounts_34d9d25f
+      summary: mobilebankingbff-5-2-0--getaccounts
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - 69c068b4-2b4a-413e-8670-5a69b064cd92
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/cards:
+    get:
+      operationId: getMobileBff520Cards_c405f6cd
+      summary: mobilebankingbff-5-2-0--getcards
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - 8ff4eacd-6f67-4004-b38b-6fd8c108a3c2
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/config:
+    get:
+      operationId: getMobileBff520Config_6310dd94
+      summary: mobilebankingbff-5-2-0--getconfig
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - 4301a96e-8306-412a-ba98-6293e78f9f91
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/dashboard:
+    get:
+      operationId: getMobileBff520Dashboard_592e306f
+      summary: mobilebankingbff-5-2-0--getdashboard
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - d8947a39-5508-49a3-b93f-518dbf9f323c
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/devices:
+    post:
+      operationId: postMobileBff520Devices_093583e6
+      summary: mobilebankingbff-5-2-0--postdevices
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - 85d55632-f1e0-420c-ae82-7882aebbd543
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/insights:
+    get:
+      operationId: getMobileBff520Insights_eb944e04
+      summary: mobilebankingbff-5-2-0--getinsights
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - 1daccc3f-7fa0-4bb7-9568-b155fd161b50
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/messages:
+    get:
+      operationId: getMobileBff520Messages_e3d5b699
+      summary: mobilebankingbff-5-2-0--getmessages
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - d8931562-9ba7-4d29-88dc-0ae0782831c1
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/offers:
+    get:
+      operationId: getMobileBff520Offers_9e77fc45
+      summary: mobilebankingbff-5-2-0--getoffers
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - f7b8d17f-f0fd-47b1-b450-e88d968af132
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/payments:
+    post:
+      operationId: postMobileBff520Payments_5a8f574a
+      summary: mobilebankingbff-5-2-0--postpayments
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - b8771fd5-5b05-4cdf-aacf-20ba1283ec9a
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/ping:
+    head:
+      operationId: headMobileBff520Ping_44b23b7b
+      summary: mobilebankingbff-5-2-0--headping
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - 22805f08-d2bb-4eed-b73a-e3446f342556
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/quick-balance:
+    get:
+      operationId: getMobileBff520QuickBalance_af5e7cab
+      summary: mobilebankingbff-5-2-0--getquick-balance
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - e0461a7b-3462-4854-be84-5335d790fcc8
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/savings-goals:
+    get:
+      operationId: getMobileBff520SavingsGoals_35433c46
+      summary: mobilebankingbff-5-2-0--getsavings-goals
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - d7fdc36f-6a31-4789-969f-052502779cac
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+    post:
+      operationId: postMobileBff520SavingsGoals_a3d641ca
+      summary: mobilebankingbff-5-2-0--postsavings-goals
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - 6c3a4416-f798-4853-a4af-ac62e9c53174
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/sca/challenges:
+    post:
+      operationId: postMobileBff520ScaChallenges_4b71416c
+      summary: mobilebankingbff-5-2-0--postsca-challenges
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - 9c02f520-ae33-45f0-851a-090b25ab1a76
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/status:
+    get:
+      operationId: getMobileBff520Status_088c2344
+      summary: mobilebankingbff-5-2-0--getstatus
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - 40516c23-1bed-43b3-b0d4-13c127a5a9a3
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+  /mobile/bff/5.2.0/support/tickets:
+    post:
+      operationId: postMobileBff520SupportTickets_d92a141d
+      summary: mobilebankingbff-5-2-0--postsupport-tickets
+      description: Inferred from Kong routing. Request and response business schemas are not observable.
+      x-kong-route-ids:
+      - 39e76de5-3f58-44dc-a838-bc9909a54469
+      x-kong-plugin-summary:
+      - acl
+      - jwt
+      - rate-limiting
+      - request-transformer
+      responses:
+        default:
+          description: Runtime response semantics are not observable from Kong configuration.
+x-kong-source:
+  serviceId: 81acb94e-7397-4f5c-8012-0ee18340457b
+  snapshotFingerprint: 07cea5136085320a7d1a760a482942009d20bec1206588859bbf39aee15301c0
+  controlPlaneId: edb363b5-777a-445c-a190-5ca0d53c0c12
+x-kong-unmapped-routes:
+- routeId: 0d0241f0-4e25-4e61-9a0a-55ccbaf9dc8f
+  routeName: mobilebankingbff-5-2-0--putsavings-goals-goalid
+  reasons:
+  - REGEX_OR_UNSUPPORTED_PATH
+- routeId: 0dce5b2e-8352-47ba-ac1e-a0e2500ac174
+  routeName: mobilebankingbff-5-2-0--getspending-period
+  reasons:
+  - REGEX_OR_UNSUPPORTED_PATH
+- routeId: 82515900-98bd-482a-ad32-d135c05c17fe
+  routeName: mobilebankingbff-5-2-0--postcards-cardid-freeze
+  reasons:
+  - REGEX_OR_UNSUPPORTED_PATH
+- routeId: a73e3d42-459c-418f-a9bf-9010356cf327
+  routeName: mobilebankingbff-5-2-0--getsupport-tickets-ticketid
+  reasons:
+  - REGEX_OR_UNSUPPORTED_PATH
+- routeId: a952525e-392d-456a-ad17-5c3e1ed5af46
+  routeName: mobilebankingbff-5-2-0--postsca-challenges-challengeid-verify
+  reasons:
+  - REGEX_OR_UNSUPPORTED_PATH
+- routeId: ddae3218-0154-4d78-8df1-0854ba6cdf60
+  routeName: mobilebankingbff-5-2-0--deletedevices-deviceid
+  reasons:
+  - REGEX_OR_UNSUPPORTED_PATH
+- routeId: e9864dfa-c159-409f-94e5-ec55e856ca46
+  routeName: mobilebankingbff-5-2-0--deletesavings-goals-goalid
+  reasons:
+  - REGEX_OR_UNSUPPORTED_PATH
+- routeId: f548d2c9-51fb-4fc9-82f5-b371aca4a6e9
+  routeName: mobilebankingbff-5-2-0--getaccounts-accountid-transactions
+  reasons:
+  - REGEX_OR_UNSUPPORTED_PATH
+- routeId: f65c9ddb-2e36-417a-b80e-d477b80e4bc1
+  routeName: mobilebankingbff-5-2-0--getpayments-paymentid
+  reasons:
+  - REGEX_OR_UNSUPPORTED_PATH
+- routeId: fcd60eaa-1fbe-4037-bddc-3022a10194a0
+  routeName: mobilebankingbff-5-2-0--postcards-cardid-unfreeze
+  reasons:
+  - REGEX_OR_UNSUPPORTED_PATH
